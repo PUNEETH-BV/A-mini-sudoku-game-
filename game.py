@@ -53,7 +53,7 @@ def run_game():
         attempts += 1
         user_row = input("enter the row (R1-R6): ").upper()
         user_col = input("enter the col (C1-C6): ").upper()
-        user_guess = int(input("enter the guess: "))
+        user_guess = input("enter the guess: ").strip()
         if (user_row,user_col,str(user_guess)) in correct_answer:
             print(f"correct answer {name} (attempt left : {max_attempts - attempts})")
             correct_answer.remove((user_row,user_col,str(user_guess)))
